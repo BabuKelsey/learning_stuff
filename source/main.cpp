@@ -1,37 +1,39 @@
 #include <iostream>
 #include <string>
 #include <math.h>
+// #include "IsInt.h"
+#include "../header/IsInt.h"
 
 using std::cout, std::cin, std::string;
 
-bool isInt(string input) {
-    if (input.length() < 1) {
-        return false;
-    }
+// bool IsInt(string input) {
+//     if (input.length() < 1) {
+//         return false;
+//     }
 
-    for (int i = 0; i < input.length(); i++) {
-        if (input[i] == '-' && i == 0 && input.length() != 1) {
-            i++;
-        }
+//     for (int i = 0; i < input.length(); i++) {
+//         if (input[i] == '-' && i == 0 && input.length() != 1) {
+//             i++;
+//         }
 
-        if (!isdigit(input[i])) {
-            if ((input[i] == '-' && i != 0) || (input[i] == '-' && input.length() == 1)) {
-                return false;
-            } else {
-                return false;
-            }
-        }
-    }
+//         if (!isdigit(input[i])) {
+//             if ((input[i] == '-' && i != 0) || (input[i] == '-' && input.length() == 1)) {
+//                 return false;
+//             } else {
+//                 return false;
+//             }
+//         }
+//     }
 
-    return true;
-}
+//     return true;
+// }
 
 int main() {
     cout << "\n\n\n\nMinecraft calculator\n\n\n\n";
 
     string s_input;
     float f_input, f_stacks, f_remainder, f_logs, f_shulkers;
-    bool isint = false;
+    bool isInt = false;
 
     // try {
     //     cin >> input;
@@ -44,14 +46,14 @@ int main() {
     //     cout << "Input \"" << input << "\" is not a number.\n";
     // }
 
-    while(!isint) {
+    while(!isInt) {
         cout << "Enter amount: ";
         cin >> s_input;
 
-        isint = isInt(s_input);
+        isInt = IsInt(s_input);
 
-        if (stof(s_input) < 1) {
-            isint = false;
+        if (isInt && stof(s_input) < 1) {
+            isInt = false;
         }
     }
 
