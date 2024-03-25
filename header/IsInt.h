@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <math.h>
 
 using std::cout, std::cin, std::string;

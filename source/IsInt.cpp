@@ -1,10 +1,4 @@
-// #include <iostream>
-// #include <string>
-// #include <math.h>
 #include "../header/IsInt.h"
-// #include "IsInt.h"
-
-// using std::cout, std::cin, std::string;
 
 bool IsInt(string input) {
     if (input.length() < 1) {
@@ -16,7 +10,7 @@ bool IsInt(string input) {
             i++;
         }
 
-        if (!isdigit(input[i])) {
+        if (!isdigit(input[i]) || isspace(input[i])) {
             if ((input[i] == '-' && i != 0) || (input[i] == '-' && input.length() == 1)) {
                 return false;
             } else {

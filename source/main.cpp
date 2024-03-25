@@ -6,28 +6,6 @@
 
 using std::cout, std::cin, std::string;
 
-// bool IsInt(string input) {
-//     if (input.length() < 1) {
-//         return false;
-//     }
-
-//     for (int i = 0; i < input.length(); i++) {
-//         if (input[i] == '-' && i == 0 && input.length() != 1) {
-//             i++;
-//         }
-
-//         if (!isdigit(input[i])) {
-//             if ((input[i] == '-' && i != 0) || (input[i] == '-' && input.length() == 1)) {
-//                 return false;
-//             } else {
-//                 return false;
-//             }
-//         }
-//     }
-
-//     return true;
-// }
-
 int main() {
     cout << "\n\n\n\nMinecraft calculator\n\n\n\n";
 
@@ -48,7 +26,7 @@ int main() {
 
     while(!isInt) {
         cout << "Enter amount: ";
-        cin >> s_input;
+        getline(cin, s_input);
 
         isInt = IsInt(s_input);
 
