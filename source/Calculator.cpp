@@ -1,29 +1,45 @@
 #include "../header/Calculator.h"
 
-void Calculator() {
+int Calculator() {
+    string s_input, s_op;
     float f_currentTotal, f_num2;
-    char c_op;
-    bool done = false;
+    bool done = false, isInt = false;;
 
-    cout << "\n\nCalculator program.\nEnter first number: ";
-    f_currentTotal = GetNumber();
+    cout << "\n\nCalculator program. Enter \"exit\" to exit calculator.\nEnter first number: ";
+    s_input = GetNumber();
 
-    while(!done) {  // to exit, miught have to throw values into functions
+    if (s_input == "exit") {
+        return 0;
+    } else {
+        f_currentTotal = stof(s_input);
+    }
+
+    while(!done) {
         cout << "Enter operator: ";
-        c_op = GetOperator();
+        s_op = GetOperator();
 
-        cout << "Enter next number: ";  //check for divide by 0
-        f_num2 = GetNumber();
+        if (s_op == "exit") {
+            return 0;
+        }
+
+        cout << "Enter next number: ";
+        s_input = GetNumber();
+
+        if (s_input == "exit") {
+            return 0;
+        } else {
+            f_num2 = stof(s_input);
+        }
         
-        if (c_op == '+') {
+        if (s_op == "+") {
             f_currentTotal += f_num2;
 
             cout << f_currentTotal << "\n";
-        } else if (c_op == '-') {
+        } else if (s_op == "-") {
             f_currentTotal -= f_num2;
 
             cout << f_currentTotal << "\n";
-        } else if (c_op == '/') {
+        } else if (s_op == "/") {
             if (f_num2 == 0) {
                 cout << "You cannot divide by 0.\n";
             } else {
@@ -31,17 +47,19 @@ void Calculator() {
             
                 cout << f_currentTotal << "\n";
             }
-        } else if (c_op == '*') {
+        } else if (s_op == "*") {
             f_currentTotal *= f_num2;
             
             cout << f_currentTotal << "\n";
         }
     }
+
+    return 0;
 }
 
-int GetNumber() {
+string GetNumber() {
     bool isInt = false;
-    string s_input = "0";
+    string s_input;
 
     while(!isInt) {
         getline(cin, s_input);
@@ -49,39 +67,38 @@ int GetNumber() {
         isInt = IsInt(s_input);
 
         if (!isInt) {
-            cout << "Enter a valid number: ";
+            if (s_input == "exit") {    // only check if input is exit if not int
+                return s_input;
+            } else {                    // else reloop
+                cout << "Enter a valid number: ";                
+            }
         }
     }
 
-    return stof(s_input);
+    return s_input;
 }
 
-char GetOperator() {
-    char c_op;
+string GetOperator() {
     bool isOp = false;
     string s_input = "0";
 
     while(!isOp) {
         getline(cin, s_input);
 
-        if (s_input.length() == 1) {
-            c_op = s_input[0];
-
-            if (c_op == '+') {
-                return c_op;
-            } else if (c_op == '-') {
-                return c_op;
-            } else if (c_op == '/') {
-                return c_op;
-            } else if (c_op == '*') {
-                return c_op;
-            }
+        if (s_input == "+") {
+            return s_input;
+        } else if (s_input == "-") {
+            return s_input;
+        } else if (s_input == "/") {
+            return s_input;
+        } else if (s_input == "*") {
+            return s_input;
+        } else if (s_input == "exit") {
+            return s_input;
         }
 
-        if (!isOp) {
-            cout << "Enter a valid operator \"+\" \"-\" \"/\" \"*\": ";
-        }
+        cout << "Enter a valid operator \"+\" \"-\" \"/\" \"*\": ";
     }
 
-    return ' ';
+    return " ";
 }

@@ -7,6 +7,6 @@
 
 using std::cout, std::cin, std::string;
 
-void Calculator();
-int GetNumber();
-char GetOperator();
+int Calculator();
+string GetNumber();
+string GetOperator();
