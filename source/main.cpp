@@ -20,18 +20,13 @@ int main() {
             getline(cin, s_input);
 
             isInt = IsInt(s_input);
-
-            if (isInt && stof(s_input) < 1) {
-                isInt = false;
-            } else if (!isInt) {
-                cout << "Please enter a valid number: ";
-            }
         }
 
         choice = stoi(s_input);
 
         switch (choice) {
-            case 0: // check case 0, feedback loop
+            case 0:
+                cout << "Goodbye.\n";
                 return 0;
             case 1:
                 MinecraftCalculator();
@@ -43,8 +38,7 @@ int main() {
                 cout << "\n\n\nOption doesnt exist.\n";
                 break;
         }
-
-        // choice = 1;
+        
         isInt = false;
     }
     

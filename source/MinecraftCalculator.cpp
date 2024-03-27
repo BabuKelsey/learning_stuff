@@ -29,7 +29,7 @@ void MinecraftCalculator() {
         }
     }
 
-    
+    f_input = stof(s_input);
 
     f_stacks = f_input/64;
     f_remainder = (f_stacks - floor(f_stacks)) * 64;
