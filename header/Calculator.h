@@ -7,4 +7,6 @@
 
 using std::cout, std::cin, std::string;
 
-void MinecraftCalculator();
+void Calculator();
+int GetNumber();
+char GetOperator();
