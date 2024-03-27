@@ -3,51 +3,47 @@
 #include <math.h>
 // #include "IsInt.h"
 #include "../header/IsInt.h"
+#include "../header/MinecraftCalculator.h"
 
 using std::cout, std::cin, std::string;
 
 int main() {
-    cout << "\n\n\n\nMinecraft calculator\n\n\n\n";
-
     string s_input;
-    float f_input, f_stacks, f_remainder, f_logs, f_shulkers;
+    int choice = 1;
     bool isInt = false;
 
-    // try {
-    //     cin >> input;
-    //     if (cin.fail())
-    //         throw std::invalid_argument("Input not a number.\n");
-    //     // if (input < 1)
-    //     //     throw 2;
-    // }
-    // catch (std::exception e) {
-    //     cout << "Input \"" << input << "\" is not a number.\n";
-    // }
+    while (choice != 0){
+        cout << "\n\n\n\n0. Exit.\n1. Minecraft calculator.\nEnter option: ";
 
-    while(!isInt) {
-        cout << "Enter amount: ";
-        getline(cin, s_input);
+        while(!isInt) {
+            getline(cin, s_input);
 
-        isInt = IsInt(s_input);
+            isInt = IsInt(s_input);
 
-        if (isInt && stof(s_input) < 1) {
-            isInt = false;
+            if (isInt && stof(s_input) < 1) {
+                isInt = false;
+            } else if (!isInt) {
+                cout << "Please enter a valid number: ";
+            }
         }
+
+        choice = stoi(s_input);
+
+        switch (choice) {
+            case 0:
+                return 0;
+            case 1:
+                MinecraftCalculator();
+                break;
+            default:
+                cout << "\n\n\nOption doesnt exist.\n";
+                break;
+        }
+
+        // choice = 1;
+        isInt = false;
     }
-
-    f_input = stof(s_input);
-
-    f_stacks = f_input/64;
-    f_remainder = (f_stacks - floor(f_stacks)) * 64;
-    f_logs = ceil(f_input/4);
-    f_shulkers = ceil(f_stacks/27);
     
-
-    cout << "\n\nAmount: " << s_input 
-         << "\nShulkers: " << f_shulkers
-         << "\nStacks: " << int(f_stacks) 
-         << "\nRemainder: " << f_remainder
-         << "\nLogs: " << f_logs;
 
     return 0;
 }

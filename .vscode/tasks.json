@@ -8,8 +8,11 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 //"${file}",
-                //"${workspaceFolder}\\*.cpp",
+                // "${workspaceFolder}\\*.cpp",
                 "${fileDirname}\\*.cpp",
+                // "source\\main.cpp",
+                // "source\\isint.cpp",
+                // "source\\minecraftcalculator.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
