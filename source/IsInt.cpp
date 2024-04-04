@@ -1,21 +1,26 @@
 #include "../header/IsInt.h"
 
+/**
+ * Checks if the input string represents an integer.
+ * 
+ * This function takes a string input and checks if it represents an integer.
+ * An integer can have an optional leading negative sign followed by one or more digits.
+ * 
+ * @param input The input string to be checked.
+ * @return true if the input is an integer, false otherwise.
+ */
 bool IsInt(string input) {
-    if (input.length() < 1) {
-        return false;
+    if (input.empty() || input == "-") {
+        return false;  // Empty string/single char of "-" is not an integer
     }
 
-    for (int i = 0; i < input.length(); i++) {
-        if (input[i] == '-' && i == 0 && input.length() != 1) {
-            i++;
-        }
+    // Initialize loop index
+    int i = (input[0] == '-') ? 1 : 0;
 
+    // Check if all characters are digits
+    for (; i < input.length(); i++) {
         if (!isdigit(input[i]) || isspace(input[i])) {
-            if ((input[i] == '-' && i != 0) || (input[i] == '-' && input.length() == 1)) {
-                return false;
-            } else {
-                return false;
-            }
+            return false;  // Non-numeric character or whitespace found
         }
     }
 
