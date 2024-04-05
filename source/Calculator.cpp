@@ -1,5 +1,13 @@
 #include "../header/Calculator.h"
 
+/**
+ * Calculator with basic arithmetic functions.
+ * 
+ * Can "add", "subtract", "multiply", "divide".
+ * Checks for *divide* by "0".
+ * Checks for *valid inputs* only.
+ * Function loops till the user enters "exit".
+*/
 int Calculator() {
     string s_input, s_op;
     float f_currentTotal, f_num2;
@@ -34,24 +42,26 @@ int Calculator() {
         if (s_op == "+") {
             f_currentTotal += f_num2;
 
-            cout << f_currentTotal << "\n";
+            // cout << f_currentTotal << "\n";
         } else if (s_op == "-") {
             f_currentTotal -= f_num2;
 
-            cout << f_currentTotal << "\n";
+            // cout << f_currentTotal << "\n";
         } else if (s_op == "/") {
             if (f_num2 == 0) {
                 cout << "You cannot divide by 0.\n";
             } else {
                 f_currentTotal /= f_num2;
             
-                cout << f_currentTotal << "\n";
+                // cout << f_currentTotal << "\n";
             }
         } else if (s_op == "*") {
             f_currentTotal *= f_num2;
             
-            cout << f_currentTotal << "\n";
+            // cout << f_currentTotal << "\n";
         }
+
+        cout << f_currentTotal << "\n";
     }
 
     return 0;
@@ -85,20 +95,23 @@ string GetOperator() {
     while(!isOp) {
         getline(cin, s_input);
 
-        if (s_input == "+") {
+        if (s_input == "+" || s_input == "-" || s_input == "/" || s_input == "*" || s_input == "exit") {
             return s_input;
-        } else if (s_input == "-") {
-            return s_input;
-        } else if (s_input == "/") {
-            return s_input;
-        } else if (s_input == "*") {
-            return s_input;
-        } else if (s_input == "exit") {
-            return s_input;
-        }
+        } 
+        
+        
+        // else if (s_input == "-") {
+        //     return s_input;
+        // } else if (s_input == "/") {
+        //     return s_input;
+        // } else if (s_input == "*") {
+        //     return s_input;
+        // } else if (s_input == "exit") {
+        //     return s_input;
+        // }
 
         cout << "Enter a valid operator \"+\" \"-\" \"/\" \"*\": ";
     }
 
-    return " ";
+    return "exit";
 }

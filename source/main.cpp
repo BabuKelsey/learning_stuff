@@ -1,10 +1,12 @@
 #include <iostream>
 #include <string>
 #include <math.h>
+#include "../header/ClearScreen.h"
 #include "../header/IsInt.h"
 #include "../header/MinecraftCalculator.h"
 #include "../header/Calculator.h"
 #include "../header/Wordle.h"
+
 
 using std::cout, std::cin, std::string;
 
@@ -34,12 +36,15 @@ int main() {
                 cout << "Goodbye.\n";
                 return 0;
             case 1:
+                ClearScreen();
                 MinecraftCalculator();
                 break;
             case 2:
+                ClearScreen();
                 Calculator();
                 break;
             case 3:
+                ClearScreen();
                 Wordle();
                 break;
             default:
