@@ -32,7 +32,7 @@ void Wordle() {
         //cout << "\nRandom word: " << randomWord << "\n";  //use for testing
 
         cout << "\nTries left: " << 5 - tries << "\nType 5 letters: ";
-        cin >> s_input;     // check if input is more than 5 before continuing
+        getline(cin, s_input);  // check if input is more than 5 before continuing
 
         // do check
         // check each first, if all matches, exit loop

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <math.h>
-// #include "IsInt.h"
 #include "../header/IsInt.h"
 #include "../header/MinecraftCalculator.h"
 #include "../header/Calculator.h"
@@ -10,11 +9,12 @@
 using std::cout, std::cin, std::string;
 
 int main() {
-    string s_input;
     int choice = 1;
-    bool isInt = false;
 
     while (choice != 0){
+        string s_input;
+        bool isInt = false;
+
         cout << "\n\n\n\n0. Exit\n1. Minecraft calculator\n2. Calculator\n3. Wordle\nEnter option: ";
 
         while(!isInt) {
@@ -46,8 +46,6 @@ int main() {
                 cout << "\n\n\nOption doesnt exist.\n";
                 break;
         }
-        
-        isInt = false;
     }
     
 
