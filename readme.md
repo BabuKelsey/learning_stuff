@@ -1,8 +1,8 @@
 # This repo is just me learning stuff.
-> currently no real plans
-> *maybe* make snake again
-> make a "bank" using classes to handle users and their balances
->  - store to external file
+> - currently no real plans
+> - *maybe* make snake again
+> - make a "bank" using classes to handle users and their balances
+>   - store to external file
 
 # Working modules (so far as appears in file order)
 >*Calculator.cpp
