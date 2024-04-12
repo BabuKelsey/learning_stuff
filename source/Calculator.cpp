@@ -41,32 +41,29 @@ int Calculator() {
         
         if (s_op == "+") {
             f_currentTotal += f_num2;
-
-            // cout << f_currentTotal << "\n";
         } else if (s_op == "-") {
             f_currentTotal -= f_num2;
-
-            // cout << f_currentTotal << "\n";
         } else if (s_op == "/") {
             if (f_num2 == 0) {
                 cout << "You cannot divide by 0.\n";
             } else {
                 f_currentTotal /= f_num2;
-            
-                // cout << f_currentTotal << "\n";
             }
         } else if (s_op == "*") {
             f_currentTotal *= f_num2;
-            
-            // cout << f_currentTotal << "\n";
         }
 
-        cout << f_currentTotal << "\n";
+        cout << "Current total: " << f_currentTotal << "\n";
     }
 
     return 0;
 }
 
+/**
+ * Validates the user's input for numbers.
+ * 
+ * @return string of valid number or "exit".
+*/
 string GetNumber() {
     bool isInt = false;
     string s_input;
@@ -88,6 +85,11 @@ string GetNumber() {
     return s_input;
 }
 
+/**
+ * Validates the user's input for an operator.
+ * 
+ * @return string of valid operator or "exit".
+*/
 string GetOperator() {
     bool isOp = false;
     string s_input = "0";
@@ -98,17 +100,6 @@ string GetOperator() {
         if (s_input == "+" || s_input == "-" || s_input == "/" || s_input == "*" || s_input == "exit") {
             return s_input;
         } 
-        
-        
-        // else if (s_input == "-") {
-        //     return s_input;
-        // } else if (s_input == "/") {
-        //     return s_input;
-        // } else if (s_input == "*") {
-        //     return s_input;
-        // } else if (s_input == "exit") {
-        //     return s_input;
-        // }
 
         cout << "Enter a valid operator \"+\" \"-\" \"/\" \"*\": ";
     }

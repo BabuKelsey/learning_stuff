@@ -1,6 +1,8 @@
 # This repo is just me learning stuff.
-> currently no plans
+> currently no real plans
 > *maybe* make snake again
+> make a "bank" using classes to handle users and their balances
+>  - store to external file
 
 # Working modules (so far as appears in file order)
 >*Calculator.cpp
@@ -12,12 +14,24 @@
 >      - checks for *valid inputs* only
 >      - function loops till the user enters "exit"
 >    - string GetNumber()
+>      - validates the user's input for numbers and returns as string
+>      - only valid non-numeric string is "exit"
 >    - string GetOperator()
+>      - validates the user's input for operators and returns as string
+>      - only valid non-operator string is "exit"
 
 >*ClearScreen.cpp
 >  - function and purpose:
->    - void ClearScreen()
->      - works to clear the terminal
+>    - ClearScreen::ClearScreen()
+>      - default class constructor
+>    - void ClearScreen::setOption(bool input)
+>      - sets the option to clear the terminal through "input"
+>    - void ClearScreen::getOption()
+>      - gets the option set by the user to clear the terminal
+>    - void ClearScreen::clearScreen()
+>      - clears the terminal based on the user's preference
+>        - done this because vsc uses an internal simulated cmd and was bugging out
+>          - its a linux but because im on windows, its not reading right
 
 >*IsInt.cpp
 >  - function and purpose:
@@ -35,7 +49,7 @@
 >  - function and purpose:
 >    - void Wordle()
 >      - game of wordle
->      - works exactly as you would expect it to
+>      - works exactly as you would expect it to xd
 
 # TODO
 >*try doing try-catch error handling

@@ -42,7 +42,10 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "algorithm": "cpp",
+        "random": "cpp",
+        "vector": "cpp"
     },
     "cmake.buildTask": false
 }

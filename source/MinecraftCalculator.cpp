@@ -1,5 +1,8 @@
 #include "../header/MinecraftCalculator.h"
 
+/**
+ * Divides the total blocks into its total stacks, its remainder, if its logs, and how many shulker boxes are needed.
+*/
 void MinecraftCalculator() {
     cout << "\n\nMinecraft calculator\n\n";
 

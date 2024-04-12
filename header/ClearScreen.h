@@ -1,5 +1,15 @@
 #pragma once
 
 #include <cstdlib>
+#include <iostream>
 
-void ClearScreen();
+class ClearScreen {
+private:
+    bool b_clearScreen;
+
+public:
+    ClearScreen();
+    void clearScreen();
+    void setOption(bool);
+    bool getOption();
+};
