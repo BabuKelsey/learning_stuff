@@ -6,6 +6,7 @@
 #include "../header/MinecraftCalculator.h"
 #include "../header/Calculator.h"
 #include "../header/Wordle.h"
+#include "../header/Bank.h"
 
 using std::cout, std::cin, std::string;
 
@@ -17,7 +18,13 @@ int main() {
         string s_input;
         bool isInt = false, clearScreen = false;
 
-        cout << "\n\n\n\n0. Exit\n1. Options.\n2. Minecraft calculator\n3. Calculator\n4. Wordle\nEnter option: ";
+        cout << "\n\n\n\n0. Exit\n"
+            "1. Options.\n"
+            "2. Minecraft calculator\n"
+            "3. Calculator\n"
+            "4. Wordle\n"
+            "5. Bank\n"
+            "Enter option: ";
 
         while(!isInt) {
             getline(cin, s_input);
@@ -78,6 +85,10 @@ int main() {
             case 4:
                 CS.clearScreen();
                 Wordle();
+                break;
+            case 5:
+                CS.clearScreen();
+                BankOfBanks();
                 break;
             default:
                 cout << "\n\n\nOption doesnt exist.\n";
