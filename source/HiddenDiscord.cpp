@@ -17,6 +17,6 @@ void HiddenDiscord() {
         s_convertedInput += "||";
     }
     
-    cout << "\nyour input: " << s_input
-         << "\nyour converted input: " << s_convertedInput;
+    cout << "\nYour input: " << s_input
+         << "\nYour converted input: " << s_convertedInput;
 }
