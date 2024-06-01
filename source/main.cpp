@@ -7,6 +7,7 @@
 #include "../header/Calculator.h"
 #include "../header/Wordle.h"
 #include "../header/Bank.h"
+#include "../header/HiddenDiscord.h"
 
 using std::cout, std::cin, std::string;
 
@@ -23,7 +24,8 @@ int main() {
             "2. Minecraft calculator\n"
             "3. Calculator\n"
             "4. Wordle\n"
-            "5. Bank\n"
+            "5. Bank stuff\n"
+            "6. Hidden discord\n"
             "Enter option: ";
 
         while(!isInt) {
@@ -43,7 +45,9 @@ int main() {
                 cout << "Goodbye.\n";
                 return 0;
             case 1:
-                cout << "\nOptions: \nEnter \"1\" to enable clear screen.\nEnter \"2\" to disable clear screen.\n> ";
+                cout << "\nOptions: "
+                "\nEnter \"1\" to enable clear screen."
+                "\nEnter \"2\" to disable clear screen.\n> ";
 
                 isInt = false;
 
@@ -90,12 +94,17 @@ int main() {
                 CS.clearScreen();
                 BankOfBanks();
                 break;
+            case 6:
+                CS.clearScreen();
+                HiddenDiscord();
+                break;
             default:
                 cout << "\n\n\nOption doesnt exist.\n";
                 break;
         }
     }
     
-
+    cin.ignore();
+    
     return 0;
 }
