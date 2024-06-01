@@ -8,6 +8,7 @@
 #include "../header/Wordle.h"
 #include "../header/Bank.h"
 #include "../header/HiddenDiscord.h"
+#include "../header/UwUifier.h"
 
 using std::cout, std::cin, std::string;
 
@@ -26,6 +27,7 @@ int main() {
             "4. Wordle\n"
             "5. Bank stuff\n"
             "6. Hidden discord\n"
+            "7. UwUifier.\n"
             "Enter option: ";
 
         while(!isInt) {
@@ -98,6 +100,10 @@ int main() {
                 CS.clearScreen();
                 HiddenDiscord();
                 break;
+            case 7:
+                CS.clearScreen();
+                UwUifier();
+                break;
             default:
                 cout << "\n\n\nOption doesnt exist.\n";
                 break;
@@ -105,6 +111,6 @@ int main() {
     }
     
     cin.ignore();
-    
+
     return 0;
 }
