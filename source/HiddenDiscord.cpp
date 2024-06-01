@@ -12,10 +12,6 @@ void HiddenDiscord() {
     getline(cin, s_input);
 
     for(int i = 0; i < s_input.length(); i++) {
-        // string + ||
-        // string + input at i
-        // string + ||
-
         s_convertedInput += "||";
         s_convertedInput += s_input[i];
         s_convertedInput += "||";
