@@ -4,8 +4,8 @@
  * Convert's input to spoilered text for discord.
 */
 void HiddenDiscord() {
-    cout << "\n\nConvert's input to spoilered text for discord.\n\n"
-            "Enter your text you wish to convert here: ";
+    cout << "\n\nConverts input to spoilered text for discord.\n\n"
+            "Enter the text that you wish to convert here: ";
 
     string s_input, s_convertedInput;    
 
