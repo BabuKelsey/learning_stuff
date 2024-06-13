@@ -13,14 +13,12 @@ void AlternateTextCases() {
 
     getline(cin, s_input);
 
-    s_convertedInput = s_input;
-
     for(int i = 0; i < s_input.length(); i++) {
         // convert odds to lower and evens to upper
         if (i % 2 == 0) {   // is even
-            s_convertedInput[i] = toupper(s_convertedInput[i]);
+            s_convertedInput += toupper(s_input[i]);
         } else {    // is odd
-            s_convertedInput[i] = tolower(s_convertedInput[i]);
+            s_convertedInput += tolower(s_input[i]);
         }
     }
     

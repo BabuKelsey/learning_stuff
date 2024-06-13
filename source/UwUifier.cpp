@@ -28,6 +28,6 @@ void UwUifier() {
         }
     }
     
-    cout << "\nyour input: " << s_input
-         << "\nyour converted input: " << s_convertedInput;
+    cout << "\nInput: " << s_input
+         << "\nConverted input: " << s_convertedInput;
 }
