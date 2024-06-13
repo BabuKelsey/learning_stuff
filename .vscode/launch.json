@@ -6,7 +6,8 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/main.exe",
-            "preLaunchTask": "C/C++: g++ ../source/*.cpp -o ${workspaceFolderBasename}" // Set to the label of your build task
+            //"preLaunchTask": "C/C++: g++ ../source/*.cpp -static-libgcc -static-libstdc++ -o ${workspaceFolderBasename}" // Set to the label of your build task
+            "preLaunchTask": "C/C++: g++ ../source/*.cpp -static -o ${workspaceFolderBasename}" // Set to the label of your build task
         }
     ]
 }

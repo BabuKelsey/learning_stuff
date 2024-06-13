@@ -22,14 +22,14 @@ int main() {
         bool isInt = false, clearScreen = false;
 
         cout << "\n\n\n\n0. Exit\n"
-            "1. Options.\n"
+            "1. Options\n"
             "2. Minecraft calculator\n"
             "3. Calculator\n"
             "4. Wordle\n"
-            "5. Bank stuff\n"
+            "5. Bank stuff(WIP)\n"
             "6. Hidden discord\n"
-            "7. UwUifier.\n"
-            "8. Alternate text case.\n"
+            "7. UwUifier\n"
+            "8. Alternate text case\n"
             "Enter option: ";
 
         while(!isInt) {

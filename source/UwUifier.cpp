@@ -11,20 +11,17 @@ void UwUifier() {
 
     getline(cin, s_input);
 
-    s_convertedInput = s_input;
-
     for(int i = 0; i < s_input.length(); i++) {
         // check if letter at i is r/l and convert to w
         if (s_input[i] == 'l' || s_input[i] == 'r') {
-            s_convertedInput[i] = 'w';
+            s_convertedInput += 'w';
         } else if (s_input[i] == 'o' && s_input[i+1] == 'o') {
-            s_convertedInput[i] = 'u';
-            s_convertedInput[i+1] = 'u';
-        //} else if (s_input[i] == 'o' ) {
-        //    s_convertedInput[i] = s_input[i];
-        //    s_convertedInput[i+1] = 'h';
+            s_convertedInput += "uu";
+        } else if (s_input[i] == 'o' && s_input[i+1] != 'o' ) {
+           s_convertedInput += s_input[i];
+           s_convertedInput += 'h';
         } else {
-            s_convertedInput[i] = s_input[i];
+            s_convertedInput += s_input[i];
         }
     }
     
