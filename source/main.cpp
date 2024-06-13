@@ -9,6 +9,7 @@
 #include "../header/Bank.h"
 #include "../header/HiddenDiscord.h"
 #include "../header/UwUifier.h"
+#include "../header/AlternateTextCases.h"
 
 using std::cout, std::cin, std::string;
 
@@ -28,6 +29,7 @@ int main() {
             "5. Bank stuff\n"
             "6. Hidden discord\n"
             "7. UwUifier.\n"
+            "8. Alternate text case.\n"
             "Enter option: ";
 
         while(!isInt) {
@@ -103,6 +105,10 @@ int main() {
             case 7:
                 CS.clearScreen();
                 UwUifier();
+                break;
+            case 8:
+                CS.clearScreen();
+                AlternateTextCases();
                 break;
             default:
                 cout << "\n\n\nOption doesnt exist.\n";

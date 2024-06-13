@@ -5,8 +5,11 @@
 >   - store to external file
 
 # Working modules (so far as appears in file order)
+>*AlternateTextCases.cpp
+>    - void AlternateTextCases()
+>      - alternates text's case via input
+
 >*Calculator.cpp
->  - function and purpose:
 >    - int Calculator()
 >      - with basic arithmetic functions
 >      - can "add", "subtract", "multiply", "divide"
@@ -21,7 +24,6 @@
 >      - only valid non-operator string is "exit"
 
 >*ClearScreen.cpp
->  - function and purpose:
 >    - ClearScreen::ClearScreen()
 >      - default class constructor
 >    - void ClearScreen::setOption(bool input)
@@ -34,24 +36,20 @@
 >          - its a linux but because im on windows, its not reading right
 
 >*HiddenDiscord.cpp
->  - function and purpose:
 >    - void HiddenDiscord()
 >      - convert's input to spoilered text for discord
 
 >*IsInt.cpp
->  - function and purpose:
 >    - bool IsInt()
 >      - checks if the user's input is a valid int
 >      - checks for negative
 >      - checks if the input is a valid int
 
 >*MinecraftCalculator.cpp
->  - function and purpose:
 >    - void MinecraftCalculator()
 >      - counts shulkers, stacks, remainder, and logs
 
 >*Wordle.cpp
->  - function and purpose:
 >    - void Wordle()
 >      - game of wordle
 >      - works exactly as you would expect it to xd
@@ -69,6 +67,3 @@
 >*wordle
 >  - read library from file instead of hardcoding it to an array
 >  - probably add feedback to 0 matches to word
-
->*hidden discord 
->  - covert input to spoilered text for discord
